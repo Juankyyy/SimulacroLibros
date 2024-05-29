@@ -34,10 +34,14 @@ CREATE TABLE Books (
     Language VARCHAR(125) NOT NULL,
     PublicationDate DATETIME NOT NULL,
     Description TEXT NOT NULL,
-    Status VARCHAR(50) NOT NULL
+    Status VARCHAR(50) NOT NULL,
+    AuthorId INT,
+    EditorialId INT,
+    FOREIGN KEY (AuthorId) REFERENCES Authors(Id),
+    FOREIGN KEY (EditorialId) REFERENCES Editorials(Id)
 );
 
 DROP TABLE Books;
 
-INSERT INTO Books (Title, Pages, Language, PublicationDate, Description, Status)
-VALUES ("Haikyu", 45, "Japones", "2012-02-20", "Shoyo Hinata es un estudiante que se fanatiza con el vóley después de ver un partido en el que la rompía un jugador petiso como él. Esto lo inspira a seguir sus pasos y convertirse en un as aunque tenga que arrancar bien de abajo.", "Activo");
+INSERT INTO Books (Title, Pages, Language, PublicationDate, Description, Status, AuthorId, EditorialId)
+VALUES ("Haikyu", 45, "Japones", "2012-02-20", "Shoyo Hinata es un estudiante que se fanatiza con el vóley después de ver un partido en el que la rompía un jugador petiso como él. Esto lo inspira a seguir sus pasos y convertirse en un as aunque tenga que arrancar bien de abajo.", "Activo", 1, 1);

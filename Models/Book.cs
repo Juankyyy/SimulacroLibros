@@ -24,5 +24,17 @@ namespace SimulacroLibros.Models
 
         [Required]
         public string? Status { get; set; }
+
+        [Required]
+        public int AuthorId { get; set; }
+
+        [Required]
+        public required Author Author { get; set; }
+
+        [Required]
+        public int EditorialId { get; set; }
+
+        [Required]
+        public required Editorial Editorial { get; set; }
     }
 }
