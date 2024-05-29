@@ -33,5 +33,23 @@ namespace SimulacroLibros.Services
             _context.Books.Update(book);
             _context.SaveChanges();
         }
+
+        public void InactiveBook(int id)
+        {
+            var book = _context.Books.Find(id);
+
+            book.Status = "Inactivo";
+            _context.Books.Update(book);
+            _context.SaveChanges();
+        }
+
+        public void ActiveBook(int id)
+        {
+            var book = _context.Books.Find(id);
+
+            book.Status = "Activo";
+            _context.Books.Update(book);
+            _context.SaveChanges();
+        }
     }
 }

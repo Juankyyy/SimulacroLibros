@@ -22,6 +22,8 @@ CREATE TABLE Editorials (
     Status VARCHAR(50) NOT NULL
 );
 
+DROP TABLE Editorials;
+
 INSERT INTO Editorials (Name, Address, Phone, Email, Status)
 VALUES ("Ivrea", "Calle 1 #11-A", "311010101", "Ivrea@gmail.com", "Activo");
 
@@ -34,6 +36,8 @@ CREATE TABLE Books (
     Description TEXT NOT NULL,
     Status VARCHAR(50) NOT NULL
 );
+
+DROP TABLE Books;
 
 INSERT INTO Books (Title, Pages, Language, PublicationDate, Description, Status)
 VALUES ("Haikyu", 45, "Japones", "2012-02-20", "Shoyo Hinata es un estudiante que se fanatiza con el vóley después de ver un partido en el que la rompía un jugador petiso como él. Esto lo inspira a seguir sus pasos y convertirse en un as aunque tenga que arrancar bien de abajo.", "Activo");

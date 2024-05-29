@@ -8,5 +8,7 @@ namespace SimulacroLibros.Services
         Book GetOne(int id);
         void CreateBook(Book book);
         void UpdateBook(Book book);
+        public void InactiveBook(int id);
+        public void ActiveBook(int id);
     }
 }

@@ -33,5 +33,23 @@ namespace SimulacroLibros.Services
             _context.Editorials.Update(editorial);
             _context.SaveChanges();
         }
+
+        public void InactiveEditorial(int id)
+        {
+            var editorial = _context.Editorials.Find(id);
+
+            editorial.Status = "Inactivo";
+            _context.Editorials.Update(editorial);
+            _context.SaveChanges();
+        }
+
+        public void ActiveEditorial(int id)
+        {
+            var editorial = _context.Editorials.Find(id);
+
+            editorial.Status = "Activo";
+            _context.Editorials.Update(editorial);
+            _context.SaveChanges();
+        }
     }
 }

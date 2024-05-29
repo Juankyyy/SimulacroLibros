@@ -42,5 +42,14 @@ namespace SimulacroLibros.Services
             _context.Authors.Update(author);
             _context.SaveChanges();
         }
+
+        public void ActiveAuthor(int id)
+        {
+            var author = _context.Authors.Find(id);
+
+            author.Status = "Activo";
+            _context.Authors.Update(author);
+            _context.SaveChanges();
+        }
     }
 }
