@@ -30,7 +30,7 @@ namespace SimulacroLibros.AddControllers
 
             } catch (Exception ex)
             {
-                return StatusCode(500, $"Error al actualizar autor");
+                return StatusCode(500, $"Error al actualizar autor: {ex.Message}");
             }
         }
     }

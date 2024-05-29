@@ -9,5 +9,6 @@ namespace SimulacroLibros.Data
 
         public DbSet<Author> Authors { get; set; }
         public DbSet<Editorial> Editorials { get; set; }
+        public DbSet<Book> Books { get; set; }
     }
 }

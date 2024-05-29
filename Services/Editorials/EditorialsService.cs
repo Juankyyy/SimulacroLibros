@@ -16,5 +16,22 @@ namespace SimulacroLibros.Services
         {
             return _context.Editorials.ToList();
         }
+
+        public Editorial GetOne(int id)
+        {
+            return _context.Editorials.Find(id);
+        }
+
+        public void CreateEditorial(Editorial editorial)
+        {
+            _context.Editorials.Add(editorial);
+            _context.SaveChanges();
+        }
+
+        public void UpdateEditorial(Editorial editorial)
+        {
+            _context.Editorials.Update(editorial);
+            _context.SaveChanges();
+        }
     }
 }

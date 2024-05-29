@@ -30,3 +30,6 @@ CREATE TABLE Books (
     PublicationDate DATETIME NOT NULL,
     Description TEXT NOT NULL
 );
+
+INSERT INTO Books (Title, Pages, Language, PublicationDate, Description)
+VALUES ("Haikyu", 45, "Japones", "2012-02-20", "Shoyo Hinata es un estudiante que se fanatiza con el vóley después de ver un partido en el que la rompía un jugador petiso como él. Esto lo inspira a seguir sus pasos y convertirse en un as aunque tenga que arrancar bien de abajo.");

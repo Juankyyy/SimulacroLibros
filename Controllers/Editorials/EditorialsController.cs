@@ -27,5 +27,23 @@ namespace SimulacroLibros.AddControllers
                 return StatusCode(500, $"Error al traer las editoriales: {ex.Message}");
             }
         }
+
+        [HttpGet("{id}")]
+        public IActionResult GetEditorial(int id)
+        {
+            try
+            {
+                var editorial = _editorialsService.GetOne(id);
+
+                if(editorial == null)
+                {
+                    return BadRequest($"No se encontró la editorial con id: {id}");
+                }
+                return Ok(editorial);
+            } catch (Exception ex)
+            {
+                return StatusCode(500, $"Error al traer la editorial con id {id}: {ex.Message}");
+            }
+        }
     }
 }

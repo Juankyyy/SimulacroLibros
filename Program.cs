@@ -19,6 +19,7 @@ builder.Services.AddDbContext<SimulacroLibrosContext>(options =>
 
 builder.Services.AddScoped<IAuthorsService, AuthorsService>();
 builder.Services.AddScoped<IEditorialsService, EditorialsService>();
+builder.Services.AddScoped<IBooksService, BooksService>();
 
 var app = builder.Build();
 

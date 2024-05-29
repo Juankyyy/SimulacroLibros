@@ -43,7 +43,7 @@ namespace SimulacroLibros.AddControllers
             } 
             catch (Exception ex)
             {
-                return StatusCode(500, $"Error al traer el autor con id: {id}");
+                return StatusCode(500, $"Error al traer el autor con id: {id}: {ex.Message}");
             }
         }
     }
