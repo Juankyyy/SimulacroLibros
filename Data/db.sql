@@ -9,7 +9,7 @@ CREATE TABLE Authors (
 TRUNCATE TABLE Authors;
 
 INSERT INTO Authors (Name, LastName, Email, Nationality)
-VALUES ("Juanky", "H", "juanky@gmail.com", "Colombia"), ("Juanda", "O", "juanda@gmail.com", "Colombia")
+VALUES ("Juanky", "H", "juanky@gmail.com", "Colombia");
 
 CREATE TABLE Editorials (
     Id INT PRIMARY KEY AUTO_INCREMENT,
@@ -19,6 +19,9 @@ CREATE TABLE Editorials (
     Email VARCHAR(125) NOT NULL UNIQUE
 );
 
+INSERT INTO Editorials (Name, Address, Phone, Email)
+VALUES ("Ivrea", "Calle 1 #11-A", "311010101", "Ivrea@gmail.com");
+
 CREATE TABLE Books (
     Id INT PRIMARY KEY AUTO_INCREMENT,
     Title VARCHAR(255) NOT NULL,
@@ -27,5 +30,3 @@ CREATE TABLE Books (
     PublicationDate DATETIME NOT NULL,
     Description TEXT NOT NULL
 );
-
-TRUNCATE TABLE Authors;

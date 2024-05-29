@@ -18,6 +18,7 @@ builder.Services.AddDbContext<SimulacroLibrosContext>(options =>
     Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.20-mysql")));
 
 builder.Services.AddScoped<IAuthorsService, AuthorsService>();
+builder.Services.AddScoped<IEditorialsService, EditorialsService>();
 
 var app = builder.Build();
 

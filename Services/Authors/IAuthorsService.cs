@@ -8,5 +8,7 @@ namespace SimulacroLibros.Services
         Author GetAuthor(int id);
 
         void CreateAuthor (Author author);
+        
+        void UpdateAuthor (Author author);
     }
 }

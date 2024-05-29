@@ -8,5 +8,6 @@ namespace SimulacroLibros.Data
         public SimulacroLibrosContext(DbContextOptions<SimulacroLibrosContext> options) : base(options) {}
 
         public DbSet<Author> Authors { get; set; }
+        public DbSet<Editorial> Editorials { get; set; }
     }
 }

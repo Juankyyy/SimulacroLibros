@@ -27,5 +27,11 @@ namespace SimulacroLibros.Services
             _context.Authors.Add(author);
             _context.SaveChanges();
         }
+
+        public void UpdateAuthor(Author author)
+        {
+            _context.Authors.Update(author);
+            _context.SaveChanges();
+        }
     }
 }
