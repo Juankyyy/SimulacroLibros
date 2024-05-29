@@ -18,5 +18,8 @@ namespace SimulacroLibros.Models
 
         [Required]
         public string? Email { get; set; }
+
+        [Required]
+        public string? Status { get; set; }
     }
 }

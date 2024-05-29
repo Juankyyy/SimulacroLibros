@@ -10,5 +10,7 @@ namespace SimulacroLibros.Services
         void CreateAuthor (Author author);
         
         void UpdateAuthor (Author author);
+
+        void InactiveAuthor (int id);
     }
 }

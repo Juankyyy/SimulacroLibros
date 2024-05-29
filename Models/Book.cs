@@ -21,5 +21,8 @@ namespace SimulacroLibros.Models
 
         [Required]
         public string? Description { get; set; }
+
+        [Required]
+        public string? Status { get; set; }
     }
 }
